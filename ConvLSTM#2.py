@@ -45,8 +45,6 @@ print(tf.__version__)
 
 LOG_INITIAL_VALUE = 1
 
-print("quase morri na selva")
-
 # ===========
 #  Functions
 # ===========
