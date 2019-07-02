@@ -477,7 +477,7 @@ model.fit_generator(imageLoader(train_images,train_labels,skip,seq_len),
                         epochs=EPOCHS,
                         validation_data=imageLoader(test_images,test_labels,skip_val,seq_len),
                         validation_steps=((len(test_images))-((seq_len-1)*13)), #13 -> 26/2 -> is the number of test files in the dataset
-                        callbacks=[whistory])#, cbk2])
+                        callbacks=[whistory,cbk3])#, cbk2])
 
 
 # ----- Save ----- #
