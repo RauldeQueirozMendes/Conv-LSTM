@@ -47,10 +47,10 @@ LOG_INITIAL_VALUE = 1
 
 def load_and_scale_image(filepath,random_index):
     image_input = img_to_array(load_img(filepath, target_size=(128,416), interpolation='lanczos'))
-    if random_index[1] == 1:
-        image_input = apply_brightness_shift(image_input,random_index[0])
     if random_index[2] == 1:
         image_input = flip_axis(image_input,axis=1)
+    if random_index[1] == 1:
+        image_input = apply_brightness_shift(image_input,random_index[0])
     if random_index[3] == 1:
         image_input = flip_axis(image_input,axis=2)
     image_input = image_input.astype(np.float32)
